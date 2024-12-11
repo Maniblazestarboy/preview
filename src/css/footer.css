@@ -1,0 +1,145 @@
+:root {
+  --color-primary: #d4af37;
+  --color-background: #ffffff;
+  --color-text: #666;
+  --color-dark: #333;
+  --color-light: #f9f9f9;
+  --color-footer-bg: #1c1c1c;
+  --color-instagram: #e1306c;
+  --color-facebook: #3b5998;
+  --color-whatsapp: #25d366;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background: var(--color-background);
+}
+
+.rodape {
+  background: var(--color-footer-bg);
+  color: var(--color-light);
+  padding: 4rem 1rem;
+}
+
+.rodape-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.rodape-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rodape-logo img {
+  max-width: 200px;
+  margin-bottom: 1rem;
+}
+
+.rodape-logo p {
+  text-align: center;
+  color: var(--color-text);
+  font-size: 0.9rem;
+}
+
+.rodape-links h4 {
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.rodape-links h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: var(--color-primary);
+}
+
+.rodape-links ul {
+  list-style: none;
+}
+
+.rodape-links ul li {
+  margin-bottom: 0.5rem;
+}
+
+.rodape-links ul li a {
+  color: var(--color-light);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.rodape-links ul li a:hover {
+  color: var(--color-primary);
+}
+
+.redes-sociais {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.redes-sociais a {
+  color: var(--color-light);
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.redes-sociais a:hover {
+  transform: scale(1.2);
+}
+
+.redes-sociais .ri-instagram-line:hover {
+  color: var(--color-instagram);
+}
+
+.redes-sociais .ri-facebook-line:hover {
+  color: var(--color-facebook);
+}
+
+.redes-sociais .ri-whatsapp-line:hover {
+  color: var(--color-whatsapp);
+}
+
+.rodape-bottom {
+  background: #111;
+  color: var(--color-text);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.8rem;
+}
+
+.rodape-bottom a {
+  color: var(--color-primary);
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .rodape-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .rodape-container {
+    grid-template-columns: 1fr;
+  }
+}

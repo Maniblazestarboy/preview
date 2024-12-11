@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camila Rodrigues Advanced Aesthetics</title>
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+   
+    
+     <!-- Estilo Geral  -->
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/navbar.css">
+    <link rel="stylesheet" href="src/css/sobre.css">
+    <link rel="stylesheet" href="src/css/footer.css">
+    <link rel="stylesheet" href="src/css/contacto.css">
+    <link rel="stylesheet" href="src/css/antis-e-depois.css">
+    <link rel="stylesheet" href="src/css/hero.css">
+    <link rel="stylesheet" href="src/css/navbar.css">
+    
+    
+    
+    
+    <style>
+        :root {
+            --color-primary: #d4af37;
+            --color-background: #ffffff;
+            --color-text: #666;
+            --color-dark: #333;
+            --color-light: #f9f9f9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: var(--color-background);
+            line-height: 1.6;
+        }
+
+        .depoimentos-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 1rem;
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--color-primary);
+            margin-bottom: 3rem;
+            position: relative;
+            font-size: 2.5rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: var(--color-primary);
+        }
+
+        .swiper-depoimentos {
+            width: 100%;
+            padding: 2rem 0;
+        }
+
+        .depoimento-card {
+            background: var(--color-light);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: all 0.3s ease;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .depoimento-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        }
+
+        .cliente-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cliente-foto {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border: 3px solid var(--color-primary);
+        }
+
+        .cliente-nome {
+            font-weight: bold;
+            color: var(--color-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .rating {
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+
+        .depoimento-texto {
+            font-style: italic;
+            color: var(--color-text);
+            margin-bottom: 1rem;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: var(--color-primary) !important;
+        }
+
+        @media (max-width: 768px) {
+            .depoimento-card {
+                height: auto;
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+  
+    <!-- Cabeçalho -->
+  <header>
+    <div class="logo">
+        <i class="ri-sparkling-line"></i>
+        Camila Rodrigues
+    </div>
+    
+    <button class="menu-toggle" aria-label="Menu" onclick="toggleMenu()">
+        <i class="ri-menu-line"></i>
+    </button>
+
+    <nav id="nav">
+        <ul>
+            <li><a href="#home">Início</a></li>
+            <li><a href="#services">Tratamentos</a></li>
+            <li><a href="#depoimentos">Depoimentos</a></li>
+            <li><a href="#gallery">Galeria</a></li>
+            <li><a href="#contact">Contato</a></li>
+        </ul>
+        <a href="#contact" class="cta-button">
+            <i class="ri-calendar-line"></i>
+            Agendar Agora
+        </a>
+    </nav>
+</header>
+
+
+    <!-- Hero -->
+    <section style="background-image: url(src/image/banner\ 1.png); background-size: cover;" class="hero" id="home">
+        <div class="hero-background"></div>
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-content">
+            <h1>Transforme Sua Beleza com Cuidados Avançados</h1>
+            <p>Experimente tratamentos de estética de alta qualidade para realçar sua beleza natural com técnicas inovadoras e personalizadas.</p>
+            
+            <div class="hero-cta">
+                <a href="#contact" class="cta-button">
+                    <i class="ri-calendar-line"></i>
+                    Agendar Consulta
+                </a>
+                <a href="#services" class="cta-button cta-secondary">
+                    <i class="ri-star-line"></i>
+                    Nossos Serviços
+                </a>
+            </div>
+    
+            <div class="hero-services">
+                <div class="service-badge">
+                    <i class="ri-face-line"></i>
+                    Tratamento Facial
+                </div>
+                <div class="service-badge">
+                    <i class="ri-body-scan-line"></i>
+                    Estética Corporal
+                </div>
+            </div>
+        </div>
+    </section>
+  
+  
+   <!-- Seção Sobre a Clínica -->
+ <section class="about-section" id="about">
+    <div class="about-container">
+      <!-- Texto sobre a clínica -->
+      <div class="about-text">
+        <h2>Sobre a Clínica</h2>
+        <p><strong>História de Camila Rodrigues:</strong> formação, experiência e paixão pela estética. Camila Rodrigues é uma profissional renomada com anos de dedicação ao bem-estar e beleza de seus clientes.</p>
+        <p><strong>Missão:</strong> Proporcionar autoestima e bem-estar com segurança e técnicas avançadas.</p>
+      </div>
+
+      <!-- Imagens -->
+      <div class="about-images">
+        <img src="src/image/CEO.png" alt="Foto da fundadora">
+        <img src="src/image/equipa (2).png" alt="Equipe atendendo clientes">
+      </div>
+    </div>
+
+    <!-- Certificações -->
+    <div class="about-certifications">
+      <h3>Certificações e Premiações</h3>
+      <div class="certification-list">
+        <div class="certification-item">
+          <i class="fas fa-medal"></i>
+          <p>Curso Avançado em Estética</p>
+        </div>
+        <div class="certification-item">
+          <i class="fas fa-award"></i>
+          <p>Prêmio de Excelência em Beleza</p>
+        </div>
+        <div class="certification-item">
+          <i class="fas fa-certificate"></i>
+          <p>Certificado de Qualidade Profissional</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+    <!-- Tratamentos -->
+  <section class="services" id="services">
+    <h2>Nossos Tratamentos</h2>
+    <div class="service-items">
+      <div class="service-item">
+        <i class="fas fa-spa"></i>
+        <h3>Faciais</h3>
+        <p>Tratamentos faciais personalizados para uma pele radiante.</p>
+      </div>
+      <div class="service-item">
+        <i class="fas fa-leaf"></i>
+        <h3>Corpo</h3>
+        <p>Cuidados corporais para modelar e tonificar seu corpo.</p>
+      </div>
+      <div class="service-item">
+        <i class="fas fa-vial"></i>
+        <h3>Tecnologia Avançada</h3>
+        <p>Equipamentos de última geração para resultados incríveis.</p>
+      </div>
+    </div>
+  </section>
+
+   <!--antes e depois -->
+<div class="antes-depois-section">
+    <div class="container">
+        <h2 class="section-title">Antes e Depois</h2>
+        <div class="gallery" id="antesDepoisGallery"></div>
+    </div>
+</div>
+    
+  <!--Depoimentos -->
+ <section class="depoimentos-container" id="depoimentos">
+    <h2 class="section-title">Depoimentos de Clientes</h2>
+    
+    <div class="swiper swiper-depoimentos">
+        <div class="swiper-wrapper" id="depoimentos-wrapper"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+  
+
+
+        <section class="gallery-section" id="gallery">
+
+        <div class="gallery-header">
+
+            <h2>Descubra a Experiência Camila Rodrigues</h2>
+            <p>Explore nossos espaços, resultados e momentos que transformam vidas.</p>
+        </div>
+
+        <div class="gallery-filters">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="ambiente">Ambiente</button>
+            <button class="filter-btn" data-filter="equipe">Equipe</button>
+            <button class="filter-btn" data-filter="antes-depois">Antes e Depois</button>
+            <button class="filter-btn" data-filter="momentos">Momentos Especiais</button>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid"></div>
+
+        <div class="gallery-cta">
+            <a href="#contact" class="cta-button">
+                <i class="ri-calendar-line"></i>
+                Agende sua consulta e viva a experiência Camila Rodrigues!
+            </a>
+        </div>
+
+        <div class="lightbox" id="lightbox">
+            <div class="lightbox-content">
+                <span class="lightbox-close" id="lightboxClose">&times;</span>
+                <img src="" alt="Imagem ampliada" id="lightboxImage">
+            </div>
+        </div>
+    </section>
+    
+    
+      <!-- Contato -->
+
+  <section class="contato-container" id="contact">
+    <h2 class="section-title">Contato e Localização</h2>
+    
+    <div class="formulario-contato">
+        <form id="formularioContato">
+            <input type="text" placeholder="Nome Completo" required>
+            <input type="email" placeholder="E-mail" required>
+            <input type="tel" placeholder="Telefone">
+            <select required>
+                <option value="">Selecione o Serviço</option>
+                <option value="tratamento-facial">Tratamento Facial</option>
+                <option value="estetica-corporal">Estética Corporal</option>
+                <option value="depilacao">Depilação</option>
+                <option value="outros">Outros</option>
+            </select>
+            <textarea placeholder="Sua Mensagem" required></textarea>
+            <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+        </form>
+    </div>
+
+    <div class="informacoes-contato">
+        <div class="info-item">
+            <i class="ri-phone-line"></i>
+            <span>(11) 3456-7890</span>
+        </div>
+        <div class="info-item">
+            <i class="ri-map-pin-line"></i>
+            <span>Av. Paulista, 1000 - São Paulo, SP</span>
+        </div>
+        <div class="info-item">
+            <i class="ri-time-line"></i>
+            <span>Segunda a Sexta: 09h - 20h</span>
+        </div>
+        <a href="https://wa.me/5511999999999" target="_blank" class="btn-whatsapp">
+            <i class="ri-whatsapp-line"></i>
+            Fale Conosco no WhatsApp
+        </a>
+    </div>
+
+    <div class="mapa-container">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d252305.89994260116!2d12.995713386718759!3d-8.853532399999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8714ea25f305901f%3A0x43165b82cc57235a!2sCamila%20Rodrigues%20-%20Clinica%20de%20Estetica%20Luanda!5e0!3m2!1spt-PT!2sao!4v1733860366840!5m2!1spt-PT!2sao"
+            width="100%" 
+            height="400" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
+    </div>
+</section>
+ 
+    
+    
+    
+    <!-- footer -->
+
+<footer class="rodape">
+
+    <div class="rodape-container">
+        <div class="rodape-logo">
+            <img src="logo.png" alt="Camila Rodrigues Estética Avançada">
+            <p>Transformando vidas através da estética e bem-estar.</p>
+            <div class="redes-sociais">
+                <a href="#" target="_blank" class="ri-instagram-line"></a>
+                <a href="#" target="_blank" class="ri-facebook-line"></a>
+                <a href="#" target="_blank" class="ri-whatsapp-line"></a>
+            </div>
+        </div>
+
+        <div class="rodape-links">
+            <h4>Menu</h4>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#services">Tratamentos</a></li>
+                <li><a href="#gallery">Galeria</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
+            </ul>
+        </div>
+
+        <div class="rodape-links">
+            <h4>Serviços</h4>
+            <ul>
+                <li><a href="#">Tratamento Facial</a></li>
+                <li><a href="#">Estética Corporal</a></li>
+                <li><a href="#">Depilação</a></li>
+                <li><a href="#">Limpeza de Pele</a></li>
+            </ul>
+        </div>
+
+        <div class="rodape-links">
+            <h4>Contato</h4>
+            <ul>
+                <li><a href="#">(+244) 942-421-000</a></li>
+                <li><a href="#">contato@esteticaavancada.com</a></li>
+                <li><a href="#">Av. São Paulo</a></li>
+                <li><a href="#" class="btn-agendar">Agendar Agora</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="rodape-bottom">
+        © 2024 Camila Rodrigues Estética Avançada. Todos os direitos reservados.
+        <a href="#">Política de Privacidade</a> | 
+        <a href="#">Termos de Uso</a>
+    </div>
+</footer>
+    
+    
+    
+    
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+   
+    <script src="src/javascript/depoimentos.js"></script>
+    <script src="src/javascript/JavaScript.js">scr</script>
+    <script src="src/javascript/footer.js">footer.js</script>
+    <script src="src/javascript/contacto.js">contacto.js</script>
+    <script src="src/javascript/antis-e-depois.js">antis-e-depois.js</script>
+   <script src="src/javascript/hero.js">hero.js</script>
+    
+</body>
+</html>
